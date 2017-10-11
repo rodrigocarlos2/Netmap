@@ -1,1 +1,30 @@
 
+* Pode ser que algum dos comandos abaixo precisem de privilégio de super usuário, se for, coloque a senha e execute o comando.
+
+* A princípio, execute todos os comandos sem estar como super usuário.
+
+git clone https://github.com/luigirizzo/netmap.git
+
+cd netmap
+
+cd LINUX
+
+./configure
+
+./configure --show-drivers
+
+./configure --kernel-dir=/a/b/c/linux-A.B.C/
+
+make
+
+make apps
+
+sudo make install
+
+modprobe netmap
+
+modprobe -r veth
+
+modprobe netmap
+
+modprobe veth_netmap
